@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>RAHA PHONE – Vente, Réparation, Accessoires</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Manrope:wght@400;500;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#12151b;--bg2:#1a1f28;--ink:#f3f6fb;--mut:#9aa6b8;--blue:#3b82ff;--blue2:#1e5be0;--w:#fff;--soft:#f2f5fa;--txt:#141a24;--r:22px;
 --hf:'Sora','Segoe UI',system-ui,sans-serif;--bf:'Manrope','Segoe UI',system-ui,sans-serif}
@@ -116,6 +116,8 @@ footer .cp{border-top:1px solid #ffffff14;margin-top:34px;padding-top:20px;font-
 section{padding:60px 0}.wa{display:grid}
 .cta .btn{flex:1 1 100%}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.lg{background:none;border:1.5px solid #ffffff40;color:#fff;border-radius:99px;padding:6px 14px;font:700 .85rem var(--bf);cursor:pointer}.lg:hover{background:#ffffff14}
+[dir=rtl]{--hf:'Tajawal','Segoe UI',system-ui,sans-serif;--bf:'Tajawal','Segoe UI',system-ui,sans-serif}[dir=rtl] .wa{right:auto;left:16px}
 </style>
 </head>
 <body>
@@ -123,6 +125,7 @@ section{padding:60px 0}.wa{display:grid}
 <a href="#accueil" class="logo">RAHA <b>PHONE</b></a>
 <div class="links" id="links">
 <a href="#accueil">Accueil</a><a href="#telephones">Téléphones</a><a href="#reparation">Réparation</a><a href="#accessoires">Accessoires</a><a href="#promotions">Promotions</a><a href="#contact">Contact</a></div>
+<button class="lg" id="lg" aria-label="Langue">عربي</button>
 <button class="burger" id="bg" aria-label="Menu">☰</button>
 </div></nav>
 
@@ -225,6 +228,21 @@ document.getElementById("bg").onclick=()=>l.classList.toggle("open");
 l.onclick=()=>l.classList.remove("open");
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll(".rv").forEach(n=>io.observe(n));
+
+const AR={"Accueil": "الرئيسية", "Téléphones": "الهواتف", "Réparation": "التصليح", "Accessoires": "الإكسسوارات", "Promotions": "العروض", "Contact": "اتصل بنا", "Vente • Réparation • Accessoires": "بيع • تصليح • إكسسوارات", "Voir les téléphones": "اكتشف الهواتف", "Demander une réparation": "اطلب تصليحًا", "Neuf": "جديد", "garantie incluse": "مع الضمان", "30 min": "30 دقيقة", "réparations express": "تصليح سريع", "6j/7": "6 أيام/7", "en magasin": "في المحل", "Nos smartphones": "هواتفنا الذكية", "Appareils neufs et scellés, garantie magasin. Prix en dinars algériens.": "هواتف جديدة ومغلفة مع ضمان المحل. الأسعار بالدينار الجزائري.", "Nos services de réparation": "خدمات التصليح", "Diagnostic clair, pièces de qualité, appareil rendu rapidement.": "تشخيص واضح، قطع غيار ذات جودة، وتسليم الجهاز بسرعة.", "Nos accessoires": "إكسسواراتنا", "Tout pour protéger et recharger votre téléphone.": "كل ما تحتاجه لحماية هاتفك وشحنه.", "Nos meilleures offres": "أفضل عروضنا", "Offres limitées, dans la limite des stocks.": "عروض محدودة حسب المخزون المتوفر.", "Pack Écran + Verre": "باك الشاشة + الزجاج", "Remplacement d'écran avec film de protection offert.": "تغيير الشاشة مع زجاج حماية مجاني.", "J'en profite": "أستفيد من العرض", "Cadeau": "هدية", "Smartphone + Coque": "هاتف + كوك", "Une coque et un verre trempé offerts pour tout achat de smartphone.": "كوك وزجاج حماية مجانا عند شراء أي هاتف.", "Gratuit": "مجاني", "Diagnostic offert": "فحص مجاني", "Diagnostic gratuit si vous confirmez la réparation chez nous.": "فحص مجاني إذا أكدت التصليح عندنا.", "Réserver": "احجز", "Pourquoi choisir Raha Phone": "لماذا تختار راحة فون", "Produits garantis": "منتجات مضمونة", "Téléphones neufs, d'origine, avec garantie.": "هواتف جديدة وأصلية مع الضمان.", "Réparation rapide": "تصليح سريع", "La plupart des pannes réglées le jour même.": "أغلب الأعطال تُصلح في نفس اليوم.", "Prix clairs": "أسعار واضحة", "Devis annoncé avant toute intervention.": "نعلمك بالسعر قبل أي تدخل.", "Conseil honnête": "نصيحة صادقة", "On vous oriente vers le bon modèle pour votre budget.": "نوجهك إلى الهاتف المناسب لميزانيتك.", "Avis clients": "آراء الزبائن", "Écran remplacé en moins d'une heure, téléphone comme neuf. Prix correct, je recommande.": "تم تغيير الشاشة في أقل من ساعة والهاتف كأنه جديد. سعر معقول، أنصح بهم.", "Réparation d'écran": "تصليح الشاشة", "J'ai acheté mon Samsung ici, bon conseil et coque offerte. Service très sérieux.": "اشتريت هاتف سامسونغ من هنا، نصيحة جيدة وكوك مجاني. خدمة جدية جدا.", "Achat smartphone": "شراء هاتف", "Batterie changée, mon téléphone tient à nouveau toute la journée. Merci à l'équipe.": "تم تغيير البطارية وهاتفي يصمد اليوم كله من جديد. شكرا للفريق.", "Remplacement batterie": "تغيير البطارية", "Contact et localisation": "اتصل بنا والموقع", "Passez au magasin ou écrivez-nous sur WhatsApp.": "زرنا في المحل أو راسلنا على واتساب.", "Téléphone": "الهاتف", "Adresse": "العنوان", "El Hidhab, Sétif": "الحذاب، سطيف", "Horaires": "أوقات العمل", "Sam – Jeu : 09h00 – 22h00": "السبت – الخميس : 09:00 – 22:00", "Vendredi : fermé": "الجمعة : مغلق", "Ouvrir dans Google Maps": "افتح في خرائط غوغل", "© 2026 RAHA PHONE. Tous droits réservés.": "© 2026 RAHA PHONE. جميع الحقوق محفوظة.", "En stock": "متوفر", "Dernières pièces": "آخر القطع", "Sur commande": "عند الطلب", "Voir le produit": "شاهد المنتج", "Commander": "اطلب الآن", "Écran cassé": "شاشة مكسورة", "Remplacement d'écran tactile ou complet.": "تغيير الشاشة اللمسية أو الكاملة.", "Remplacement de batterie": "تغيير البطارية", "Retrouvez une vraie autonomie.": "استعد بطارية تدوم طويلا.", "Connecteur de charge": "منفذ الشحن", "Le téléphone ne charge plus ? On répare.": "الهاتف لا يشحن؟ نصلحه.", "Caméra": "الكاميرا", "Caméra avant ou arrière floue, cassée ou HS.": "كاميرا أمامية أو خلفية غير واضحة أو مكسورة أو معطلة.", "Problèmes logiciels": "مشاكل البرمجيات", "Blocage, mises à jour, formatage, déblocage.": "تعليق، تحديث، فورمات، فك القفل.", "Diagnostic": "فحص الجهاز", "On trouve la panne et on annonce le prix.": "نحدد العطل ونعلمك بالسعر.", "Autres réparations": "تصليحات أخرى", "Haut-parleur, micro, boutons, dégâts d'eau.": "سماعة، ميكروفون، أزرار، أضرار الماء.", "Demander un devis": "اطلب عرض سعر", "Verres de protection": "زجاج الحماية", "Coques": "كوكات", "Chargeurs rapides": "شواحن سريعة", "Écouteurs": "سماعات", "Power banks": "باوربانك", "Câbles": "كابلات"};
+const O=new WeakMap();
+function tr(s){const m=s.match(/^(\s*)([\s\S]*?)(\s*)$/);const k=m[2];if(!k)return s;
+let r=AR[k];if(!r)r=k.replace(/^dès /,"ابتداءً من ").replace(/\bDA\b/g,"دج").replace(/\bGo\b/g,"جيغا");return m[1]+r+m[3]}
+function setLang(l){
+document.documentElement.lang=l;document.documentElement.dir=l=="ar"?"rtl":"ltr";
+document.title=l=="ar"?"راحة فون – بيع، تصليح، إكسسوارات":"RAHA PHONE – Vente, Réparation, Accessoires";
+document.getElementById("lg").textContent=l=="ar"?"Français":"عربي";
+const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
+while(n=w.nextNode()){const p=n.parentNode.nodeName;if(p=="SCRIPT"||p=="STYLE"||n.parentNode.id=="lg")continue;
+if(!O.has(n))O.set(n,n.nodeValue);n.nodeValue=l=="ar"?tr(O.get(n)):O.get(n)}
+try{localStorage.setItem("lang",l)}catch(e){}}
+document.getElementById("lg").onclick=()=>setLang(document.documentElement.lang=="ar"?"fr":"ar");
+try{if(localStorage.getItem("lang")=="ar")setLang("ar")}catch(e){}
 </script>
 </body>
 </html>
